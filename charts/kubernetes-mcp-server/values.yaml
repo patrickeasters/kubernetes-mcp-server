@@ -153,6 +153,17 @@ readinessProbe:
     path: /healthz
     port: http
 
+# -- Extra environment variables for the main container.
+# -- Each entry is a standard Kubernetes env var (name + value or valueFrom).
+extraEnv: []
+# - name: MY_VAR
+#   value: "my-value"
+# - name: SECRET_VAR
+#   valueFrom:
+#     secretKeyRef:
+#       name: my-secret
+#       key: my-key
+
 # -- Additional volumes on the output Deployment definition.
 extraVolumes: []
 # - name: foo

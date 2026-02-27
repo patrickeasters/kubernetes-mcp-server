@@ -77,6 +77,7 @@ Each container accepts any valid Kubernetes container field including `image`, `
 | defaultPodSecurityContext | object | `{"seccompProfile":{"type":"RuntimeDefault"}}` | Default Security Context for the Pod when one is not provided |
 | defaultSecurityContext | object | `{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"runAsNonRoot":true}` | Default Security Context for the Container when one is not provided |
 | extraContainers | list | `[]` | Each container is defined as a complete container spec. |
+| extraEnv | list | `[]` | Each entry is a standard Kubernetes env var (name + value or valueFrom). |
 | extraVolumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | extraVolumes | list | `[]` | Additional volumes on the output Deployment definition. |
 | fullnameOverride | string | `""` |  |
